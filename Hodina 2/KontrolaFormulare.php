@@ -14,8 +14,12 @@ if(isset($_POST["odeslat"])){
 	$adresa = $_POST["adresa"];
 	if (strlen($adresa)<10){
 		echo "<p style='color:tomato'>Adresa musi obshovat alespon 10 znaku</p>";
+	}else{
+		echo $adresa;
 	}
 	if ($exploze<2){
 		echo "<p style='color:tomato'>Zadejte jmeno i prijmeni</p>";
+	}else{
+		echo "<br>".$jmeno;
 	}
 }
