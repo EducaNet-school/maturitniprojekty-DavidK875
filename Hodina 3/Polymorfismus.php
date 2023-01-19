@@ -17,6 +17,10 @@ public function vratInfo(){
 	return $this."<br>";
 }
 
+public function vratInfoBB(){
+	return $this;
+}
+
 }
 
 class nakladak extends auto{
@@ -28,7 +32,7 @@ parent::__construct($typ,$znacka);
 	$this->nosnost = $nosnost;
 }
 public function vratInfo(){
-	$a = parent::vratInfo();
+	$a = parent::vratInfoBB();
 	$a .= $this->nosnost;
 	return $a."<br>";
 }
@@ -41,7 +45,7 @@ public function __construct($typ, $znacka, $dojezd){
 	parent::__construct($typ, $znacka);
 }
 public function vratInfo(){
-	$a = parent::vratInfo();
+	$a = parent::vratInfoBB();
 	$a .= $this->dojezd;
 	return $a."<br>";
 }
