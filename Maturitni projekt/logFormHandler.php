@@ -31,7 +31,11 @@ public static function gen(){
 		<input type='password' name='password'id ='password'<br>
 		<br>
 		<br><input type='submit' name='submit' value = 'Přihlásit se'>
+	</form>
 	
+	<footer>
+      <p>&copy; 2023 Přihlášení</p>
+    </footer>
 	";
 }
 }
