@@ -15,7 +15,7 @@ function fibonacci($pocet){
 
 function fibonaccihoRada($pocet){
  for($i=0;$i<$pocet;$i++){
-	 echo Fibonacci($i);
+	 echo Fibonacci($i)." ";
 }
 }
 echo fibonacci(8);
