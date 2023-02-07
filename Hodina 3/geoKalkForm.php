@@ -15,9 +15,9 @@ if (isset($_POST['submit'])){
 	}
 	echo "<br>".sqr::vypocObvod($a)." Obvod ctverce";
 	echo "<br>".rect::vypocObvod($a,$b)." Obvod obdelniku";
-	echo "<br>".tri::vypocObvod($a,$b,$c)." Obvod trojuhelniku";
+	echo "<br>".tri::vypocObvod($a,$b,$c)." Obvod rovnoramenného trojuhelniku";
 	
-	echo "<br>".sqr::vypocObsah($a)." Obsah ctverce";
+	echo "<br>".sqr::vypocObsah($a)." Obsah ctverce"; 
 	echo "<br>".rect::vypocObsah($a,$b)." Obsah obdelniku";
-	echo "<br>".sqr::vypocObsah($a,$b,$c)." Obsah trojuhelniku";
+	echo "<br>".tri::vypocObsah($a,$b,$c)." Obsah rovnoramenného trojuhelniku";
 }

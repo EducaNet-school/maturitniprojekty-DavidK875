@@ -56,7 +56,7 @@ public function __construct($a,$b,$c){
 	$this->sideB = $b;
 	$this->sideC = $c;
 }
-public static function chechValidity($a,$b,$c){
+public static function checkValidity($a,$b,$c){
 	if ($a+$b>$c or $a+$c>$b or $b+$c>$a){
 		return 1;
 	}else{
@@ -64,9 +64,9 @@ public static function chechValidity($a,$b,$c){
 	}
 
 }
-public static function vypocObsah(){
-	$p = ($this->side1 + $this->side2 + $this->side2) / 2;
-        return sqrt($p * ($p - $this->side1) * ($p - $this->side2) * ($p - $this->side2));
+public static function vypocObsah($a,$b,$c){
+	$p = ($a+$b+$c) / 2;
+        return sqrt($p * ($p - $a) * ($p - $b) * ($p - $c));
 }
 public static function vypocObvod($a,$b,$c){
 	$pocet = $a + $b + $c;
