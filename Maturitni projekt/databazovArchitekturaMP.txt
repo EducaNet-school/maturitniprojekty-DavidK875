@@ -38,7 +38,8 @@ CREATE TABLE User(
   id INT(10) PRIMARY KEY AUTO_INCREMENT,
   jmeno VARCHAR(20) UNIQUE,
   admin INT(1),
-  heslo VARCHAR(30)
+  email varchar(20),
+  heslo VARCHAR(100)
 );
 
 CREATE TABLE Seznam(

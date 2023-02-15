@@ -33,9 +33,9 @@ public static function gen(){
 		<br><input type='submit' name='submit' value = 'Přihlásit se'>
 	</form>
 	
-	<footer>
-      <p>&copy; 2023 Přihlášení</p>
-    </footer>
+	<div id = ".'footer'.">
+      <p>&copy; 2023 Maturitní projekt</p>
+    </div>
 	";
 }
 }
