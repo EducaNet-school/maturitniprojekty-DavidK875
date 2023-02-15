@@ -118,7 +118,7 @@
     <p>Už máte účet? <a href="login.php">Přihlásit</a>.</p>
   </form>
 </body>
-<div id = ".footer">
+<div id = "footer">
       <p>&copy; 2023 Maturitní projekt</p>
     </div>
 </html>
