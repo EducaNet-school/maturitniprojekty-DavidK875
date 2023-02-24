@@ -14,4 +14,22 @@ insert into award(name,about,date,place) values("Oscar","academy sucks","1978-4-
 insert into award(name,about,date,place) values("Oscar","academy sucks","1981-3-31","Los Angels");
 insert into award(name,about,date,place) values("Oscar","academy sucks","1984-4-9","Los Angels");
 /* award data */
-
+insert into actor(f_name,l_name) VALUES("Morgan","Freeman");
+insert into actor(f_name,l_name) VALUES("Mark","Hamill");
+insert into actor(f_name,l_name) VALUES("Harrison","Ford");
+insert into actor(f_name,l_name) VALUES("Jackee","Chan");
+insert into actor(f_name,l_name) VALUES("Carrie","Fisher");
+insert into actor(f_name,l_name) VALUES("Alec","Guiness");
+insert into actor(f_name,l_name) VALUES("David","Prowse");
+insert into actor(f_name,l_name) VALUES("Tim","Robbins");
+/*actor data*/
+insert into m2c(movie,category) VALUES(1,5);
+insert into m2c(movie,category) VALUES(2,3);
+insert into m2c(movie,category) VALUES(3,3);
+insert into m2c(movie,category) VALUES(4,3);
+insert into m2c(movie,category) VALUES(5,1);
+insert into m2c(movie,category) VALUES(5,2);
+/*Category with movie */
+insert into m2aw(movie,award) VALUES(2,1);
+insert into m2aw(movie,award) VALUES(3,2);
+insert into m2aw(movie,award) VALUES(4,3);

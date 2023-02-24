@@ -39,10 +39,12 @@ section {
 #footer {
 background-color: #333;
 color: white;
-height: 25px;
+height: 50px;
 width: 100%;
-position: relative;
+position: fixed;
 clear: both;
+bottom: 0;
+text-align: center;
 }
 .contact-card {
   background-color: white;
@@ -52,13 +54,12 @@ clear: both;
   display: flex;
   align-items: center;
   margin: 20px auto;
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: fixed;
+  right: 35%;
 }
 .contact-card:hover {
   transform: scale(1.2);
@@ -70,6 +71,7 @@ clear: both;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
+  align-items: center;
 }
 form {
   width: 400px;
@@ -81,7 +83,7 @@ form {
   border-radius: 5px;
 }
 
-input[type="text"], input[type="email"], input[type="password"] {
+.login{
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -109,6 +111,15 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #555;
 }
+
+#login{
+  color: black;
+  padding: 10px;
+  text-align: Center;
+  justify-content: center;
+  display: flex;
+}
+
 
 .error {
   color: red;

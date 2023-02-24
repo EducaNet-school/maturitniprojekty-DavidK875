@@ -1,10 +1,8 @@
 
-CREATE DATABASE MP;
-USE MP;
-
 CREATE TABLE Autor(
   id INT(10) PRIMARY KEY AUTO_INCREMENT,
-  jmeno VARCHAR(20) UNIQUE
+  jmeno VARCHAR(20) UNIQUE,
+  prijmeni VARCHAR(20) UNIQUE
 );
 
  CREATE TABLE Preklad(
@@ -14,7 +12,8 @@ CREATE TABLE Autor(
  
 CREATE TABLE Zanr(
   id INT(10) PRIMARY KEY AUTO_INCREMENT,
-  nazev VARCHAR(20) UNIQUE
+  nazev VARCHAR(20) UNIQUE,
+  prijmeni VARCHAR(20) UNIQUE
 );
 
 CREATE TABLE Obdobi(
@@ -26,7 +25,7 @@ CREATE TABLE User(
   id INT(10) PRIMARY KEY AUTO_INCREMENT,
   jmeno VARCHAR(20) UNIQUE,
   admin INT(1),
-  email varchar(50),
+  email varchar(20),
   heslo VARCHAR(100)
 );
 
