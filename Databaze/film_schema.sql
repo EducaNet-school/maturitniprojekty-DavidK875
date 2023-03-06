@@ -50,3 +50,33 @@ id int(10) primary key auto_increment,
 foreign key(actor) references actor(id),
 foreign key(movie) references movie(id)
 );
+
+create View V_numOfAct 
+AS SELECT movie.name, COUNT(m2ac.actor) 
+AS num_actors FROM movie 
+JOIN m2ac ON movie.id = m2ac.movie 
+GROUP BY movie.id;
+
+DELIMITER $$
+CREATE FUNCTION longest_movie_in_category(category_name VARCHAR(20)) RETURNS INT DETERMINISTIC READS SQL DATA
+BEGIN
+    DECLARE max_duration INT;
+    SELECT MAX(TIME_TO_SEC(TIME(m.length))) / 60 INTO max_duration
+    FROM m2c mc
+    JOIN movie m ON m.id = mc.movie
+    JOIN category c ON c.id = mc.category
+    WHERE c.cat_name = category_name;
+    RETURN max_duration;
+END
+DELIMITER ;
+
+
+DELIMITER $$
+CREATE PROCEDURE delete_empty_categories()
+BEGIN
+    DELETE c
+    FROM category c
+    LEFT JOIN m2c mc ON c.id = mc.category
+    WHERE mc.category IS NULL;
+END
+DELIMITER ;

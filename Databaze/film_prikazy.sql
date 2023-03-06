@@ -3,7 +3,7 @@ SELECT movie.name, COUNT(m2ac.actor) AS num_actors FROM movie JOIN m2ac ON movie
 
 
 SELECT actor.f_name, actor.l_name, COALESCE(movie.name, 'Not in any movie') AS movie_name
-WHERE FROM actor 
+FROM actor 
 LEFT JOIN m2ac ON actor.id = m2ac.actor 
 LEFT JOIN movie ON m2ac.movie = movie.id;
 /*Ukol 2*/
