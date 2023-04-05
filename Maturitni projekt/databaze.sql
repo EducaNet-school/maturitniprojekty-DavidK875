@@ -5,11 +5,6 @@ CREATE TABLE Autor(
   prijmeni VARCHAR(20) UNIQUE
 );
 
- CREATE TABLE Preklad(
-  id INT(10) PRIMARY KEY AUTO_INCREMENT,
-  jmeno VARCHAR(20) UNIQUE
-);
- 
 CREATE TABLE Zanr(
   id INT(10) PRIMARY KEY AUTO_INCREMENT,
   nazev VARCHAR(20) UNIQUE,
@@ -28,6 +23,12 @@ CREATE TABLE User(
   email varchar(20),
   heslo VARCHAR(100)
 );
+SELECT count(Autor.prijmeni),Autor.prijmeni   FROM Kniha
+    LEFT JOIN Zanr ON Kniha.zanr_id = Zanr.id
+    LEFT JOIN Autor ON Kniha.autor_id = Autor.id
+    LEFT JOIN Obdobi ON Kniha.obdobi_id = Obdobi.id
+    LEFT JOIN S2K ON Kniha.id = S2K.kniha_id
+group by Autor.prijmeni
 
 CREATE TABLE Seznam(
   id INT(10) PRIMARY KEY AUTO_INCREMENT,
